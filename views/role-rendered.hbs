@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Ruta de renderizado condicional</h1>
+    <hr>
+    <p>Estás aquí porque eres {{user.username}} y tienes el rol {{user.role}}</p>
+
+    {{!-- RENDERIZADO PARA TODXS LOS USUARIOS --}}
+    <button class="btn btn-dark">Ver detalles</button>
+
+    {{!-- RENDERIZADO PARA ROL EDITOR --}}
+    {{#if isEditor}}
+    <button class="btn btn-warning">Editar contenido</button>
+    {{/if}}
+
+    {{!-- RENDERIZADO PARA ROL ADMIN --}}
+    {{#if isAdmin}}
+    <button class="btn btn-danger">Eliminar contenido</button>
+    {{/if}}
+
+</div>
